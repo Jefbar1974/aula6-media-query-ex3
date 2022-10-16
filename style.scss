@@ -1,0 +1,80 @@
+$cordobody: #8FBCB3;
+$cordobodytablet: #FCE6A8;
+$cordobackcolortablet: #AA6DC4;
+$cordocabecalho: white;
+$corbackcabecalho: #C3CFD9;
+$corprincipal: #96C3EB;
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    grid-template-rows: 0.1fr 1fr 0.1fr;
+    grid-template-areas: 
+    "cabecalho cabecalho"
+    "aside principal"
+    "rodape rodape";
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 8px;
+    gap: 8px;
+    background-color: $cordobodytablet;
+
+@media screen and (min-width:641px) and (max-width:1007px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.3fr 1fr 0.2fr;
+    grid-template-areas: 
+    "cabecalho cabecalho"
+    "aside aside"
+    "principal principal"
+    "rodape rodape";
+    
+}
+
+@media screen and (max-width:641px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1fr 0.2fr;
+    grid-template-areas: 
+    "cabecalho cabecalho"
+    "principal principal"
+    "rodape rodape";
+    
+}
+
+}
+    
+
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: $corbackcabecalho;
+    grid-area: cabecalho;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: blue;
+}
+   
+aside {
+    background-color: $cordobackcolortablet;
+    grid-area: aside;
+}
+
+main {
+    background-color: $corprincipal;
+    grid-area: principal;
+}
+
+footer {
+    background-color: $corbackcabecalho;
+    grid-area: rodape;
+}

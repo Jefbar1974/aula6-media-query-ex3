@@ -1,0 +1,58 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  grid-template-rows: 0.1fr 1fr 0.1fr;
+  grid-template-areas: "cabecalho cabecalho" "aside principal" "rodape rodape";
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 8px;
+  gap: 8px;
+  background-color: #FCE6A8;
+}
+@media screen and (min-width: 641px) and (max-width: 1007px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.3fr 1fr 0.2fr;
+    grid-template-areas: "cabecalho cabecalho" "aside aside" "principal principal" "rodape rodape";
+  }
+}
+@media screen and (max-width: 641px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1fr 0.2fr;
+    grid-template-areas: "cabecalho cabecalho" "principal principal" "rodape rodape";
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: #C3CFD9;
+  grid-area: cabecalho;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  color: blue;
+}
+
+aside {
+  background-color: #AA6DC4;
+  grid-area: aside;
+}
+
+main {
+  background-color: #96C3EB;
+  grid-area: principal;
+}
+
+footer {
+  background-color: #C3CFD9;
+  grid-area: rodape;
+}/*# sourceMappingURL=style.css.map */
