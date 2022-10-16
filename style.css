@@ -41,6 +41,19 @@ header {
   font-size: 25px;
   color: blue;
 }
+@media screen and (min-width: 641px) and (max-width: 1007px) {
+  header {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.3fr 1fr 0.2fr;
+    grid-template-areas: "cabecalho cabecalho" "aside aside" "principal principal" "rodape rodape";
+    color: rgb(154, 48, 66);
+  }
+}
+@media screen and (max-width: 641px) {
+  header {
+    color: red;
+  }
+}
 
 aside {
   background-color: #AA6DC4;
